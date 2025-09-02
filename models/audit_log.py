@@ -5,8 +5,8 @@ class AuditLog(models.Model):
     _description = 'Registro de Auditoría'
 
     user_id = fields.Many2one('res.users', string='Usuario')
-    action = fields.Char(string='Acción realizada')
-    model_name = fields.Char(string='Modelo afectado')
+    action = fields.Char(string='Acción')
+    model_name = fields.Char(string='Modelo')
     record_id = fields.Integer(string='ID del registro')
     date = fields.Datetime(string='Fecha', default=fields.Datetime.now)
 
